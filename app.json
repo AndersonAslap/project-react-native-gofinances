@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "project-react-native-gofinances",
+    "slug": "project-react-native-gofinances",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

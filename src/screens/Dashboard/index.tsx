@@ -1,4 +1,5 @@
 import React from 'react';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionsCard } from '../../components/TransactionsCard';
@@ -15,8 +16,30 @@ import {
     Icon,
     HighlightCards,
     Transactions,
-    Title
+    Title,
+    TransactionList
 } from './styles';
+
+const transactions = [
+    {
+        title: "Desenvolvimento de sites",
+        amount: "R$ 12.000,00",
+        category: { name: 'Vendas', icon: 'dollar-sign' },
+        date: "13/04/2022"
+    },
+    {
+        title: "Desenvolvimento de sites",
+        amount: "R$ 12.000,00",
+        category: { name: 'Vendas', icon: 'dollar-sign' },
+        date: "13/04/2022"
+    },
+    {
+        title: "Desenvolvimento de sites",
+        amount: "R$ 12.000,00",
+        category: { name: 'Vendas', icon: 'dollar-sign' },
+        date: "13/04/2022"
+    }
+];
 
 export function Dashboard() {
     return (
@@ -67,7 +90,18 @@ export function Dashboard() {
 
             <Transactions>
                 <Title>Listagem</Title>
-                <TransactionsCard />
+
+                <TransactionList
+                    data={transactions}
+                    renderItem={({ item }) => <TransactionsCard data={item} />}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{
+                        paddingBottom: getBottomSpace()
+                    }}
+                />
+
+
+
             </Transactions>
 
         </Container>

@@ -22,21 +22,24 @@ import {
 
 const transactions = [
     {
+        type: 'positive',
         title: "Desenvolvimento de sites",
         amount: "R$ 12.000,00",
         category: { name: 'Vendas', icon: 'dollar-sign' },
         date: "13/04/2022"
     },
     {
-        title: "Desenvolvimento de sites",
-        amount: "R$ 12.000,00",
-        category: { name: 'Vendas', icon: 'dollar-sign' },
+        type: 'negative',
+        title: "ifood",
+        amount: "R$ 120,00",
+        category: { name: 'Alimentação', icon: 'coffee' },
         date: "13/04/2022"
     },
     {
-        title: "Desenvolvimento de sites",
-        amount: "R$ 12.000,00",
-        category: { name: 'Vendas', icon: 'dollar-sign' },
+        type: 'negative',
+        title: "Aluguel de apartamento",
+        amount: "R$ 1200,00",
+        category: { name: 'Casa', icon: 'shopping-bag' },
         date: "13/04/2022"
     }
 ];
